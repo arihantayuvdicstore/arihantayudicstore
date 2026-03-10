@@ -1,806 +1,1335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>American Herbal Pharmacy – Ayurvedic Medicine</title>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>American Herbal Pharmacy — Mihir Shah | Authentic Ayurvedic Medicine, Ahmedabad</title>
+<meta name="description" content="American Herbal Pharmacy by Mihir Shah — 20+ years of Ayurvedic expertise. Authentic herbal medicines for doctors across Gujarat & Maharashtra. AYUSH certified."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
 <style>
-  :root {
-    --saffron: #FF6B00;
-    --deep-orange: #E85000;
-    --gold: #D4A017;
-    --light-gold: #F5C842;
-    --green: #2E7D32;
-    --light-green: #4CAF50;
-    --pale-green: #E8F5E9;
-    --cream: #FFF8F0;
-    --dark: #1A1200;
-    --text: #3D2800;
-    --border: #F0D9B5;
-  }
+/* ============================================================
+   AMERICAN HERBAL PHARMACY — SINGLE FILE WEBSITE
+   Designer: Organic Luxury Ayurvedic Theme
+   Palette: Deep Forest Green + Saffron Gold + Ivory Parchment
+   ============================================================ */
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --g1: #0e2b1a;
+  --g2: #1a4a2e;
+  --g3: #2d6a4f;
+  --g4: #52b788;
+  --g5: #d8f3dc;
+  --s1: #c96a10;
+  --s2: #e07c24;
+  --s3: #f4a261;
+  --s4: #fff3e0;
+  --gold: #c9a84c;
+  --gold2: #f0d080;
+  --ivory: #faf8f2;
+  --cream: #f2ede0;
+  --parch: #e8dfc8;
+  --txt1: #1c1a14;
+  --txt2: #3d3a2e;
+  --txt3: #7a7060;
+  --wht: #ffffff;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --shadow: 0 6px 32px rgba(14,43,26,.12);
+  --shadow-h: 0 16px 56px rgba(14,43,26,.22);
+  --tr: all .32s cubic-bezier(.4,0,.2,1);
+}
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--ivory);color:var(--txt1);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--g3);border-radius:10px}
 
-  /* TOP BAR */
-  .topbar {
-    background: var(--green);
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    padding: 6px 20px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-  }
-  .topbar span { margin: 0 15px; }
-  .topbar a { color: var(--light-gold); text-decoration: none; }
+/* ── UTILS ── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.tag{display:inline-block;background:var(--g5);color:var(--g3);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.tag-gold{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--g1);line-height:1.15;font-weight:700}
+.sec-sub{font-size:.95rem;color:var(--txt3);margin-top:10px;font-weight:400}
+.devanagari{font-family:'Noto Serif Devanagari',serif}
 
-  /* HEADER */
-  header {
-    background: linear-gradient(135deg, #fff 0%, #FFF3E0 100%);
-    border-bottom: 3px solid var(--saffron);
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 90px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 20px rgba(255,107,0,0.15);
-  }
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:50px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:700;transition:var(--tr)}
+.btn-green{background:linear-gradient(135deg,var(--g3),var(--g2));color:#fff;padding:13px 32px;font-size:.95rem;box-shadow:0 4px 18px rgba(45,106,79,.3)}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(45,106,79,.42)}
+.btn-saffron{background:linear-gradient(135deg,var(--s2),var(--s1));color:#fff;padding:11px 26px;font-size:.88rem;box-shadow:0 4px 16px rgba(224,124,36,.28)}
+.btn-saffron:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,124,36,.42)}
+.btn-wa{background:#25D366;color:#fff;padding:11px 24px;font-size:.88rem;box-shadow:0 4px 16px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#1eb85a;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--wht);padding:11px 28px;font-size:.92rem;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-sm{padding:9px 18px;font-size:.82rem;border-radius:8px}
 
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
+/* ── TOP BAR ── */
+.topbar{background:var(--g1);color:rgba(255,255,255,.7);font-size:.8rem;padding:7px 0;font-weight:500}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.topbar a{color:var(--s3);transition:var(--tr)}
+.topbar a:hover{color:var(--gold2)}
 
-  .logo-icon {
-    width: 64px;
-    height: 64px;
-    background: radial-gradient(circle at 40% 35%, var(--light-gold), var(--saffron));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 4px 15px rgba(255,107,0,0.4);
-    border: 3px solid var(--gold);
-    flex-shrink: 0;
-  }
+/* ── NAVBAR ── */
+.navbar{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.08);transition:var(--tr)}
+.navbar.scrolled{box-shadow:0 4px 28px rgba(14,43,26,.16)}
+.navbar .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--g2),var(--g3));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.logo-text .name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--g1);display:block;line-height:1.1}
+.logo-text .sub{font-size:.65rem;color:var(--txt3);letter-spacing:.07em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-size:.87rem;font-weight:600;color:var(--txt2);padding:7px 14px;border-radius:8px;transition:var(--tr);white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--g5);color:var(--g1)}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-phone{font-size:.82rem;font-weight:700;color:var(--g2);white-space:nowrap}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hamburger span{display:block;width:24px;height:2.5px;background:var(--g2);border-radius:2px;transition:var(--tr)}
 
-  .logo-text h1 {
-    font-family: 'Yatra One', cursive;
-    font-size: 22px;
-    color: var(--saffron);
-    line-height: 1.1;
-    letter-spacing: 0.5px;
-  }
-  .logo-text p {
-    font-size: 10px;
-    color: var(--green);
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
+/* ── TICKER ── */
+.ticker{background:linear-gradient(90deg,var(--s1),var(--s2));color:#fff;padding:8px 0;overflow:hidden;font-size:.82rem;font-weight:600}
+.ticker-track{display:flex;animation:tick 48s linear infinite;white-space:nowrap;gap:64px}
+.ticker-track span{flex-shrink:0}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-  nav { display: flex; gap: 6px; align-items: center; }
-  nav a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    font-size: 14px;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: all 0.2s;
-  }
-  nav a:hover { background: var(--pale-green); color: var(--green); }
-  nav a.active { color: var(--saffron); font-weight: 600; }
+/* ── HERO ── */
+.hero{min-height:92vh;background:linear-gradient(150deg,var(--g1) 0%,var(--g2) 50%,#1f5c3a 100%);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-mandala{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:560px;height:560px;opacity:.06;pointer-events:none}
+.hero-mandala svg{width:100%;height:100%}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(82,183,136,.18) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+.hero-glow{position:absolute;right:10%;bottom:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,.12),transparent 70%);border-radius:50%;pointer-events:none}
 
-  .header-actions { display: flex; gap: 12px; align-items: center; }
-  .btn-cart {
-    background: var(--saffron);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s;
-  }
-  .btn-cart:hover { background: var(--deep-orange); }
-  .search-bar {
-    display: flex;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .search-bar input {
-    border: none;
-    padding: 8px 14px;
-    font-size: 13px;
-    outline: none;
-    background: #fff;
-    width: 200px;
-  }
-  .search-bar button {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    padding: 0 14px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-top:80px;padding-bottom:80px;position:relative;z-index:1}
 
-  /* NAV BAR SECONDARY */
-  .nav-secondary {
-    background: var(--saffron);
-    display: flex;
-    justify-content: center;
-    gap: 0;
-  }
-  .nav-secondary a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 11px 22px;
-    letter-spacing: 0.3px;
-    transition: background 0.2s;
-    border-right: 1px solid rgba(255,255,255,0.2);
-  }
-  .nav-secondary a:hover { background: var(--deep-orange); }
+.hero-sanskrit{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);border-radius:var(--radius);padding:18px 24px;margin-bottom:28px;text-align:center;animation:fadeUp .7s ease both}
+.hero-sanskrit .shloka{font-family:'Noto Serif Devanagari',serif;font-size:1.05rem;color:var(--gold2);line-height:1.9;display:block;letter-spacing:.02em}
+.hero-sanskrit .meaning{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:6px;font-style:italic;display:block}
 
-  /* HERO BANNER */
-  .hero {
-    background: linear-gradient(120deg, #1B4332 0%, #2D6A4F 40%, #1B4332 100%);
-    position: relative;
-    overflow: hidden;
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-  }
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.4);color:var(--gold2);padding:6px 18px;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;animation:fadeUp .6s ease .1s both}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;line-height:1.1;margin-bottom:18px;animation:fadeUp .7s ease .2s both;font-weight:700}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero-desc{font-size:1rem;color:rgba(255,255,255,.72);margin-bottom:32px;max-width:480px;line-height:1.85;animation:fadeUp .7s ease .3s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s ease .4s both}
+.hero-stats{display:flex;gap:28px;margin-top:44px;animation:fadeUp .7s ease .5s both}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--gold2);font-weight:700;line-height:1}
+.stat .l{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:3px;font-weight:500}
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 70% 50%, rgba(212,160,23,0.15) 0%, transparent 60%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
+.hero-card{background:rgba(255,255,255,.07);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);padding:38px 32px;animation:fadeRight .8s ease .2s both}
+.hero-card-icon{font-size:4.5rem;text-align:center;margin-bottom:18px;display:block;filter:drop-shadow(0 4px 12px rgba(201,168,76,.35))}
+.hero-card h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem;font-weight:600;text-align:center;margin-bottom:10px}
+.hero-card p{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.7;text-align:center}
+.trust-row{display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap}
+.tbadge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:7px 13px;color:rgba(255,255,255,.85);font-size:.72rem;font-weight:700;text-align:center}
+.tbadge span{display:block;font-size:1.1rem;margin-bottom:2px}
 
-  /* Decorative leaf circles */
-  .hero-leaf {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(76,175,80,0.15), transparent);
-    pointer-events: none;
-  }
-  .hero-leaf:nth-child(1) { width: 400px; height: 400px; top: -100px; right: -100px; }
-  .hero-leaf:nth-child(2) { width: 200px; height: 200px; bottom: -50px; left: 200px; }
+/* ── CATEGORY BAR ── */
+.cat-bar{background:#fff;border-bottom:1px solid #e5ede7;padding:32px 0}
+.cat-bar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px}
+.cat-pill{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 10px;border-radius:var(--radius);cursor:pointer;transition:var(--tr);border:2px solid transparent;text-align:center}
+.cat-pill:hover,.cat-pill.on{background:var(--g5);border-color:var(--g4);transform:translateY(-2px)}
+.cat-pill .ci{font-size:1.8rem}
+.cat-pill .cn{font-size:.72rem;font-weight:700;color:var(--txt2)}
+.cat-pill:hover .cn,.cat-pill.on .cn{color:var(--g1)}
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 60px 80px;
-    max-width: 600px;
-  }
+/* ── FOUNDER ── */
+.founder{padding:88px 0;background:var(--cream);position:relative;overflow:hidden}
+.founder::before{content:'';position:absolute;left:-80px;top:50%;transform:translateY(-50%);width:320px;height:320px;background:radial-gradient(circle,rgba(82,183,136,.1),transparent 70%);border-radius:50%;pointer-events:none}
+.founder .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:center}
 
-  .hero-badge {
-    display: inline-block;
-    background: var(--saffron);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 5px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-  }
+.founder-visual{position:relative;display:flex;justify-content:flex-end}
+.founder-photo-wrap{position:relative}
+.founder-photo{width:300px;height:380px;background:linear-gradient(145deg,var(--g5),var(--parch));border-radius:var(--radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;border:3px solid rgba(82,183,136,.3);overflow:hidden}
+.founder-photo img{width:100%;height:100%;object-fit:cover}
+.founder-photo-placeholder{text-align:center;padding:24px}
+.founder-photo-placeholder .fp-icon{font-size:5rem;margin-bottom:12px;display:block}
+.founder-photo-placeholder p{font-size:.8rem;color:var(--txt3);line-height:1.5}
+.exp-badge{position:absolute;bottom:-18px;right:-18px;background:linear-gradient(135deg,var(--s2),var(--s1));color:#fff;border-radius:var(--radius);padding:16px 20px;text-align:center;box-shadow:var(--shadow);border:3px solid #fff}
+.exp-badge .num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;line-height:1}
+.exp-badge .lbl{font-size:.7rem;font-weight:600;margin-top:2px;opacity:.9}
+.ayush-badge{position:absolute;top:-14px;left:-14px;background:var(--g2);color:#fff;border-radius:var(--radius);padding:12px 16px;text-align:center;box-shadow:var(--shadow);border:2px solid rgba(82,183,136,.4)}
+.ayush-badge .icon{font-size:1.4rem;display:block}
+.ayush-badge .lbl{font-size:.65rem;font-weight:700;margin-top:2px;color:var(--g5)}
 
-  .hero h2 {
-    font-family: 'Yatra One', cursive;
-    font-size: 52px;
-    color: #fff;
-    line-height: 1.15;
-    margin-bottom: 14px;
-  }
-  .hero h2 span { color: var(--light-gold); }
+.founder-info .tag{background:var(--g5);color:var(--g3)}
+.founder-name{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--g1);font-weight:700;margin-bottom:4px;line-height:1.15}
+.founder-title{font-size:.9rem;color:var(--s2);font-weight:700;letter-spacing:.05em;margin-bottom:20px}
+.founder-info p{color:var(--txt2);font-size:.94rem;line-height:1.88;margin-bottom:16px}
+.founder-highlights{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.fh-item{display:flex;align-items:flex-start;gap:11px;background:#fff;padding:14px;border-radius:var(--radius);border:1px solid rgba(82,183,136,.15);transition:var(--tr)}
+.fh-item:hover{border-color:var(--g4);transform:translateX(3px)}
+.fh-item .ico{font-size:1.4rem;flex-shrink:0}
+.fh-item h4{font-size:.84rem;font-weight:700;color:var(--g1);margin-bottom:2px}
+.fh-item p{font-size:.75rem;color:var(--txt3)}
 
-  .hero p {
-    color: rgba(255,255,255,0.85);
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 28px;
-    max-width: 460px;
-  }
+/* ── PRODUCTS ── */
+.products{padding:88px 0;background:var(--ivory)}
+.sec-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.fb{padding:7px 18px;border-radius:50px;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr);border:2px solid #dde8df;background:#fff;color:var(--txt2);font-family:'Outfit',sans-serif}
+.fb:hover,.fb.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
+.pcard{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--tr);border:1px solid rgba(82,183,136,.1);display:flex;flex-direction:column;position:relative}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-h);border-color:rgba(82,183,136,.28)}
+.pcard.hidden{display:none}
+.pbadge{position:absolute;top:12px;left:12px;z-index:2;font-size:.68rem;font-weight:700;padding:3px 11px;border-radius:50px;letter-spacing:.04em}
+.pbadge.best{background:var(--gold);color:#fff}
+.pbadge.new{background:var(--g3);color:#fff}
+.pbadge.premium{background:var(--s2);color:#fff}
+.pimg{height:210px;background:linear-gradient(135deg,var(--g5),var(--cream));display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.pcard:hover .pimg img{transform:scale(1.06)}
+.pimg-ph{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--g3);font-size:.72rem;font-weight:600;text-align:center;padding:16px}
+.pimg-ph .pe{font-size:3.2rem}
+.pimg-ph code{font-size:.65rem;color:var(--txt3);font-family:monospace;background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px}
+.pbody{padding:20px;flex:1;display:flex;flex-direction:column}
+.pcat{font-size:.68rem;font-weight:700;color:var(--g3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.pname{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--txt1);margin-bottom:7px;line-height:1.25;font-weight:700}
+.pdesc{font-size:.8rem;color:var(--txt3);margin-bottom:12px;flex:1;line-height:1.65}
+.ptags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.ptag{background:var(--g5);color:var(--g2);font-size:.68rem;font-weight:700;padding:3px 9px;border-radius:50px}
+.pfoot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid #f0f4f1;gap:8px}
+.pprice .pl{font-size:.65rem;color:var(--txt3)}
+.pprice .pv{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--g1);font-weight:700}
+.pactions{display:flex;gap:7px}
 
-  .hero-btns { display: flex; gap: 14px; }
-  .btn-primary {
-    background: var(--saffron);
-    color: #fff;
-    border: none;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(255,107,0,0.4);
-    transition: all 0.2s;
-    letter-spacing: 0.3px;
-  }
-  .btn-primary:hover { background: var(--deep-orange); transform: translateY(-2px); }
+/* ── WHY CHOOSE US ── */
+.why{padding:88px 0;background:linear-gradient(155deg,var(--g1) 0%,#0a2115 100%);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(82,183,136,.07) 1.5px,transparent 1.5px);background-size:40px 40px;pointer-events:none}
+.why .sec-title{color:#fff}
+.why .sec-sub{color:rgba(255,255,255,.55)}
+.why .tag{background:rgba(201,168,76,.15);color:var(--gold2);border:1px solid rgba(201,168,76,.3)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:48px}
+.why-card{background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px 26px;transition:var(--tr);position:relative;overflow:hidden}
+.why-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--s2));transform:scaleX(0);transform-origin:left;transition:var(--tr)}
+.why-card:hover{border-color:rgba(255,255,255,.22);transform:translateY(-4px)}
+.why-card:hover::after{transform:scaleX(1)}
+.why-icon{font-size:2.4rem;margin-bottom:16px;display:block}
+.why-card h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.15rem;font-weight:600;margin-bottom:9px}
+.why-card p{color:rgba(255,255,255,.6);font-size:.85rem;line-height:1.75}
 
-  .btn-outline {
-    background: transparent;
-    color: #fff;
-    border: 2px solid rgba(255,255,255,0.6);
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+/* ── SCHEMES ── */
+.schemes{padding:80px 0;background:var(--cream)}
+.sch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:44px}
+.sch-card{background:#fff;border-radius:var(--radius);padding:34px 28px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden;transition:var(--tr);border:2px solid transparent}
+.sch-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-h)}
+.sch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.sch-card.c1::before{background:linear-gradient(90deg,var(--gold),var(--s2))}
+.sch-card.c2::before{background:linear-gradient(90deg,var(--g3),var(--g4))}
+.sch-card.c3::before{background:linear-gradient(90deg,#7c3aed,#a855f7)}
+.sch-icon{font-size:2.6rem;margin-bottom:14px;display:block}
+.sch-card h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--g1);font-weight:700;margin-bottom:9px}
+.sch-card p{color:var(--txt3);font-size:.85rem;line-height:1.7;margin-bottom:18px}
+.sch-hl{background:var(--s4);border-radius:8px;padding:9px 14px;font-size:.85rem;font-weight:700;color:var(--s1);margin-bottom:18px}
+.sch-card.c2 .sch-hl{background:var(--g5);color:var(--g2)}
+.sch-card.c3 .sch-hl{background:#f3e8ff;color:#7c3aed}
 
-  .hero-image {
-    position: absolute;
-    right: 80px;
-    bottom: 0;
-    width: 380px;
-    height: 420px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
+/* ── TRUST BAR ── */
+.trust-bar{padding:60px 0;background:#fff;border-top:1px solid #e5ede7;border-bottom:1px solid #e5ede7}
+.trust-bar .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px}
+.ti{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ti .ic{width:60px;height:60px;background:var(--g5);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+.ti h4{font-size:.9rem;font-weight:700;color:var(--g1)}
+.ti p{font-size:.76rem;color:var(--txt3)}
 
-  .hero-plant {
-    font-size: 260px;
-    line-height: 1;
-    filter: drop-shadow(0 0 40px rgba(76,175,80,0.3));
-    animation: float 4s ease-in-out infinite;
-  }
+/* ── BENEFITS ── */
+.benefits{padding:88px 0;background:var(--ivory)}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.ben-card{background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:0 3px 20px rgba(14,43,26,.07);border:1px solid rgba(82,183,136,.1);transition:var(--tr)}
+.ben-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(82,183,136,.25)}
+.ben-icon{font-size:2.2rem;margin-bottom:14px;display:block}
+.ben-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--g1);font-weight:700;margin-bottom:9px}
+.ben-card p{color:var(--txt3);font-size:.85rem;line-height:1.75}
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-  }
+/* ── CONTACT ── */
+.contact{padding:88px 0;background:var(--cream)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.cinfo > p{color:var(--txt2);font-size:.94rem;line-height:1.85;margin-bottom:28px}
+.c-items{display:flex;flex-direction:column;gap:16px}
+.c-item{display:flex;align-items:flex-start;gap:14px;background:#fff;padding:18px;border-radius:var(--radius);box-shadow:0 2px 12px rgba(14,43,26,.07);border:1px solid rgba(82,183,136,.1);transition:var(--tr)}
+.c-item:hover{transform:translateX(4px);border-color:var(--g4)}
+.c-item .ic{width:42px;height:42px;background:var(--g5);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.c-item h4{font-size:.82rem;font-weight:700;color:var(--txt3);margin-bottom:3px}
+.c-item p,.c-item a{font-size:.9rem;color:var(--g1);font-weight:600}
+.c-wa{margin-top:6px}
+.cform{background:#fff;border-radius:var(--radius-lg);padding:38px 34px;box-shadow:var(--shadow);border:1px solid rgba(82,183,136,.1)}
+.cform h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--g1);font-weight:700;margin-bottom:22px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:.82rem;font-weight:700;color:var(--txt2);margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 15px;border:2px solid #e0eae2;border-radius:10px;font-family:'Outfit',sans-serif;font-size:.88rem;color:var(--txt1);background:var(--ivory);transition:var(--tr);outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--g4);background:#fff;box-shadow:0 0 0 3px rgba(82,183,136,.1)}
+.fg textarea{resize:vertical;min-height:100px}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
-  /* TRUST STRIP */
-  .trust-strip {
-    background: #fff;
-    border-bottom: 2px solid var(--border);
-    display: flex;
-    justify-content: center;
-    gap: 0;
-  }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 32px;
-    border-right: 1px solid var(--border);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-  }
-  .trust-item .icon { font-size: 22px; }
-  .trust-item strong { display: block; font-size: 14px; color: var(--green); }
+/* ── FOOTER ── */
+footer{background:var(--g1);color:rgba(255,255,255,.7);padding:60px 0 0}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:44px}
+.ft-brand .fl{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.ft-brand .fl .ic{width:42px;height:42px;background:rgba(201,168,76,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.ft-brand .fl .name{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.05rem;font-weight:700;display:block;line-height:1.15}
+.ft-brand .fl .sub{font-size:.62rem;color:rgba(255,255,255,.45)}
+.ft-brand > p{font-size:.82rem;line-height:1.85;max-width:260px;margin-bottom:20px}
+.socials{display:flex;gap:8px}
+.sl{width:36px;height:36px;background:rgba(255,255,255,.09);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;transition:var(--tr);cursor:pointer}
+.sl:hover{background:var(--s2);transform:translateY(-2px)}
+.ft-col h4{font-size:.82rem;font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:.07em;text-transform:uppercase}
+.ft-col ul{display:flex;flex-direction:column;gap:9px}
+.ft-col ul li a{font-size:.82rem;color:rgba(255,255,255,.6);transition:var(--tr)}
+.ft-col ul li a:hover{color:var(--gold2);padding-left:4px}
+.ft-contact{display:flex;flex-direction:column;gap:12px}
+.fci{display:flex;align-items:flex-start;gap:9px}
+.fci .ic{font-size:.95rem;flex-shrink:0;margin-top:2px}
+.fci p{font-size:.8rem;line-height:1.5}
+.fci a{color:var(--s3)}
+.ft-bottom{margin-top:44px;padding:18px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.77rem;color:rgba(255,255,255,.4)}
+.ft-bottom .cer{display:flex;align-items:center;gap:8px;color:var(--gold2);font-weight:600}
 
-  /* SECTION COMMON */
-  section { padding: 60px 60px; }
-  .section-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .section-header .tag {
-    display: inline-block;
-    background: var(--pale-green);
-    color: var(--green);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 4px 14px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .section-header h2 {
-    font-family: 'Yatra One', cursive;
-    font-size: 36px;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .section-header h2 span { color: var(--saffron); }
-  .section-header p {
-    color: #666;
-    font-size: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,.45);cursor:pointer;transition:var(--tr);animation:waPulse 2.5s infinite;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}50%{box-shadow:0 4px 36px rgba(37,211,102,.7),0 0 0 9px rgba(37,211,102,.1)}}
 
-  /* DIVIDER */
-  .divider {
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--saffron), var(--gold));
-    border-radius: 2px;
-    margin: 12px auto 0;
-  }
+/* ── MODAL ── */
+.modal-ov{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px}
+.modal-ov.open{display:flex}
+.modal{background:#fff;border-radius:var(--radius-lg);max-width:500px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,.25);animation:fadeUp .28s ease}
+.modal-head{background:linear-gradient(135deg,var(--g2),var(--g1));padding:26px 30px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.modal-head h2{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.35rem}
+.modal-head p{color:rgba(255,255,255,.7);font-size:.82rem;margin-top:3px}
+.modal-close{background:rgba(255,255,255,.14);border:none;color:#fff;width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--tr)}
+.modal-close:hover{background:rgba(255,255,255,.25)}
+.modal-body{padding:26px 30px}
 
-  /* CATEGORIES */
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
-  }
-  .cat-card {
-    background: #fff;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    padding: 20px 12px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.25s;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .cat-card:hover {
-    border-color: var(--saffron);
-    box-shadow: 0 8px 24px rgba(255,107,0,0.15);
-    transform: translateY(-4px);
-  }
-  .cat-icon { font-size: 40px; margin-bottom: 10px; display: block; }
-  .cat-card span { font-size: 12px; font-weight: 600; line-height: 1.3; display: block; }
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
 
-  /* PRODUCT SECTION */
-  .products-section { background: #FFF8F0; }
-
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .product-card {
-    background: #fff;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.25s;
-    cursor: pointer;
-  }
-  .product-card:hover {
-    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
-    border-color: var(--saffron);
-    transform: translateY(-4px);
-  }
-
-  .product-img {
-    background: linear-gradient(135deg, var(--pale-green), #E3F2E1);
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    position: relative;
-  }
-
-  .product-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: var(--green);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-  }
-  .product-badge.hot { background: var(--saffron); }
-
-  .product-info { padding: 16px; }
-  .product-info h3 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    line-height: 1.4;
-  }
-  .product-info .sub {
-    font-size: 11px;
-    color: #888;
-    margin-bottom: 10px;
-  }
-
-  .stars { color: var(--gold); font-size: 13px; margin-bottom: 8px; }
-  .stars span { color: #999; font-size: 11px; margin-left: 4px; }
-
-  .price-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  .price {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--saffron);
-  }
-  .price-old {
-    font-size: 12px;
-    color: #aaa;
-    text-decoration: line-through;
-    margin-left: 6px;
-  }
-  .btn-add {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    padding: 7px 14px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .btn-add:hover { background: #1B5E20; }
-
-  /* OFFERS BANNER */
-  .offers { background: var(--green); }
-  .offers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .offer-card {
-    background: rgba(255,255,255,0.12);
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 16px;
-    padding: 28px 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .offer-card:hover { background: rgba(255,255,255,0.2); }
-  .offer-icon { font-size: 46px; flex-shrink: 0; }
-  .offer-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
-  .offer-card p { font-size: 13px; opacity: 0.85; line-height: 1.5; }
-  .offer-card .tag2 {
-    display: inline-block;
-    background: var(--saffron);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 6px;
-  }
-
-  /* BESTSELLERS / FEATURED */
-  .featured-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 24px;
-    align-items: stretch;
-  }
-  .featured-banner {
-    background: linear-gradient(150deg, #1B4332, #2D6A4F);
-    border-radius: 20px;
-    padding: 40px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #fff;
-    min-height: 380px;
-    position: relative;
-    overflow: hidden;
-  }
-  .featured-banner::after {
-    content: '🌿';
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    font-size: 150px;
-    opacity: 0.15;
-  }
-  .featured-banner .tag2 {
-    display: inline-block;
-    background: var(--saffron);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-    width: fit-content;
-  }
-  .featured-banner h2 {
-    font-family: 'Yatra One', cursive;
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 12px;
-    color: #fff;
-  }
-  .featured-banner p { font-size: 14px; opacity: 0.85; line-height: 1.7; margin-bottom: 20px; }
-
-  .small-products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  /* WHY US */
-  .why-section { background: #fff; }
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-  .why-card {
-    text-align: center;
-    padding: 30px 20px;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    transition: all 0.25s;
-  }
-  .why-card:hover {
-    border-color: var(--saffron);
-    box-shadow: 0 8px 24px rgba(255,107,0,0.1);
-  }
-  .why-icon { font-size: 48px; margin-bottom: 16px; }
-  .why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--green); }
-  .why-card p { font-size: 13px; color: #666; line-height: 1.7; }
-
-  /* TESTIMONIALS */
-  .testimonials { background: #FFF8F0; }
-  .testi-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .testi-card {
-    background: #fff;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    position: relative;
-  }
-  .testi-card::before {
-    content: '"';
-    font-size: 80px;
-    color: var(--saffron);
-    opacity: 0.15;
-    position: absolute;
-    top: 0;
-    left: 16px;
-    font-family: Georgia, serif;
-    line-height: 1;
-  }
-  .testi-stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; }
-  .testi-card p { font-size: 14px; color: #555; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
-  .testi-author { display: flex; align-items: center; gap: 12px; }
-  .testi-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-    background: var(--pale-green);
-    border: 2px solid var(--border);
-  }
-  .testi-author strong { font-size: 14px; display: block; }
-  .testi-author span { font-size: 12px; color: #888; }
-
-  /* NEWSLETTER */
-  .newsletter {
-    background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
-    text-align: center;
-    padding: 60px;
-  }
-  .newsletter h2 {
-    font-family: 'Yatra One', cursive;
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  .newsletter p { color: rgba(255,255,255,0.9); font-size: 15px; margin-bottom: 28px; }
-  .newsletter-form {
-    display: flex;
-    gap: 0;
-    max-width: 460px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  }
-  .newsletter-form input {
-    flex: 1;
-    border: none;
-    padding: 14px 20px;
-    font-size: 14px;
-    outline: none;
-  }
-  .newsletter-form button {
-    background: var(--green);
-    color: #fff;
-    border: none;
-    padding: 14px 24px;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .newsletter-form button:hover { background: #1B5E20; }
-
-  /* FOOTER */
-  footer {
-    background: #0D2010;
-    color: #ccc;
-    padding: 50px 60px 20px;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-  .footer-brand h3 {
-    font-family: 'Yatra One', cursive;
-    font-size: 24px;
-    color: var(--light-gold);
-    margin-bottom: 10px;
-  }
-  .footer-brand p { font-size: 13px; line-height: 1.8; margin-bottom: 16px; }
-  .footer-social { display: flex; gap: 10px; }
-  .social-btn {
-    width: 36px; height: 36px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.1);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-  .social-btn:hover { background: var(--saffron); }
-  footer h4 {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid rgba(255,107,0,0.4);
-  }
-  footer ul { list-style: none; }
-  footer ul li { margin-bottom: 8px; }
-  footer ul li a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s;
-  }
-  footer ul li a:hover { color: var(--light-gold); }
-  .footer-contact p { font-size: 13px; margin-bottom: 8px; display: flex; gap: 8px; align-items: flex-start; }
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    color: #666;
-  }
-  .footer-bottom a { color: var(--light-gold); text-decoration: none; }
-
-  /* MARQUEE */
-  .marquee-bar {
-    background: var(--gold);
-    color: var(--dark);
-    padding: 8px 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .marquee-inner {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-    font-size: 13px;
-    font-weight: 600;
-  }
-  @keyframes marquee {
-    from { transform: translateX(100vw); }
-    to { transform: translateX(-100%); }
-  }
-
-  /* SCROLL REVEAL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s, transform 0.6s;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .founder .wrap{grid-template-columns:1fr;gap:48px}
+  .founder-visual{justify-content:center}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.1);gap:3px;z-index:999}
+  .nav-phone{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:48px;padding-bottom:48px}
+  .hero-card{display:none}
+  .hero-stats{gap:18px}
+  .contact .wrap{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr;gap:28px}
+  .ft-bottom{text-align:center;justify-content:center}
+  .sec-hdr{flex-direction:column;align-items:flex-start}
+  .topbar .wrap{justify-content:center;font-size:.72rem}
+}
+@media(max-width:480px){
+  .pgrid{grid-template-columns:1fr}
+  .founder-highlights{grid-template-columns:1fr}
+  .fg-row{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{text-align:center;justify-content:center}
+}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
+<!-- ════════════════ TOP BAR ════════════════ -->
 <div class="topbar">
-  <span>🌿 100% Authentic Ayurvedic Products</span>
-  <span>📞 Call Us: +91 98765 43210</span>
-  <span>🚚 Free Delivery on orders above ₹500 | <a href="#">Shop Now</a></span>
+  <div class="wrap">
+    <span>📍 33, Moti Pole, Chunara no Khancho, Shahpur, Ahmedabad-1, Gujarat</span>
+    <span>📞 <a href="tel:9173167670">9173167670</a> &nbsp;·&nbsp; <a href="mailto:info@ahealthyvision.com">info@ahealthyvision.com</a></span>
+    <span>🚚 Cash on Delivery · Pan-India Delivery</span>
+  </div>
 </div>
 
-<!-- HEADER -->
-<header>
-  <div class="logo-wrap">
-    <div class="logo-icon">🌱</div>
-    <div class="logo-text">
-      <h1>American Herbal</h1>
-      <p>Pharmacy · Ayurveda · Wellness</p>
+<!-- ════════════════ NAVBAR ════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="wrap">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      <div class="logo-text">
+        <span class="name">American Herbal Pharmacy</span>
+        <span class="sub">अमृत तुल्य औषधि · Ahmedabad</span>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#founder">About Founder</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#benefits">Ayurveda Benefits</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-phone">📞 9173167670</span>
+      <a href="https://wa.me/919173167670?text=Hello%2C%20I%20want%20to%20enquire%20about%20your%20products" target="_blank" class="btn btn-wa" style="padding:8px 16px;font-size:.8rem;">💬 WhatsApp</a>
+      <button class="hamburger" id="ham" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════ TICKER ════════════════ -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker">
+    <span>⭐ Buy 120 Pcs + Get 240 Pcs FREE &nbsp;•&nbsp;</span>
+    <span>👨‍⚕️ Doctor Exclusive: Buy 12 Pcs + Get 24 Pcs FREE &nbsp;•&nbsp;</span>
+    <span>🌿 100% AYUSH Certified Herbal Products &nbsp;•&nbsp;</span>
+    <span>📦 Cash on Delivery Available &nbsp;•&nbsp;</span>
+    <span>🚚 Supply across Gujarat &amp; Maharashtra &nbsp;•&nbsp;</span>
+    <span>💊 20+ Years of Ayurvedic Experience — Mihir Shah &nbsp;•&nbsp;</span>
+    <span>📞 Order Now: 9173167670 &nbsp;•&nbsp;</span>
+    <span>⭐ Buy 120 Pcs + Get 240 Pcs FREE &nbsp;•&nbsp;</span>
+    <span>👨‍⚕️ Doctor Exclusive: Buy 12 Pcs + Get 24 Pcs FREE &nbsp;•&nbsp;</span>
+    <span>🌿 100% AYUSH Certified Herbal Products &nbsp;•&nbsp;</span>
+    <span>📦 Cash on Delivery Available &nbsp;•&nbsp;</span>
+    <span>🚚 Supply across Gujarat &amp; Maharashtra &nbsp;•&nbsp;</span>
+    <span>💊 20+ Years of Ayurvedic Experience — Mihir Shah &nbsp;•&nbsp;</span>
+    <span>📞 Order Now: 9173167670 &nbsp;•&nbsp;</span>
+  </div>
+</div>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero" id="home">
+  <!-- decorative -->
+  <div class="hero-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-mandala">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <circle cx="100" cy="100" r="95" stroke="#52b788" stroke-width="1"/>
+      <circle cx="100" cy="100" r="75" stroke="#52b788" stroke-width=".8"/>
+      <circle cx="100" cy="100" r="55" stroke="#52b788" stroke-width=".6"/>
+      <circle cx="100" cy="100" r="35" stroke="#52b788" stroke-width=".5"/>
+      <circle cx="100" cy="100" r="15" stroke="#52b788" stroke-width=".4"/>
+      <line x1="100" y1="5" x2="100" y2="195" stroke="#52b788" stroke-width=".5"/>
+      <line x1="5" y1="100" x2="195" y2="100" stroke="#52b788" stroke-width=".5"/>
+      <line x1="32" y1="32" x2="168" y2="168" stroke="#52b788" stroke-width=".5"/>
+      <line x1="168" y1="32" x2="32" y2="168" stroke="#52b788" stroke-width=".5"/>
+      <line x1="100" y1="5" x2="168" y2="168" stroke="#52b788" stroke-width=".3" opacity=".5"/>
+      <line x1="100" y1="5" x2="32" y2="168" stroke="#52b788" stroke-width=".3" opacity=".5"/>
+      <polygon points="100,10 120,60 170,60 130,90 145,140 100,110 55,140 70,90 30,60 80,60" stroke="#c9a84c" stroke-width=".5" fill="none" opacity=".4"/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-left">
+      <!-- Sanskrit Slogan -->
+      <div class="hero-sanskrit">
+        <span class="shloka devanagari">धर्मार्थकाममोक्षाणाम् आरोग्यं मूलमुत्तमम्।<br/>रोगास्तस्यापहर्तारः श्रेयसो जीवितस्य च॥</span>
+        <span class="meaning">"Health is the root of all wealth, virtue, desire and liberation. Disease destroys the very foundation of life." — Charaka Samhita</span>
+      </div>
+
+      <div class="hero-badge">🌿 जय धनवंतरी · Trusted Since 2010</div>
+      <h1>Authentic <em>Ayurveda</em><br/>by Mihir Shah</h1>
+      <p class="hero-desc">20+ years of Ayurvedic expertise. Premium herbal medicines trusted by doctors across Gujarat &amp; Maharashtra. AYUSH certified. Cash on Delivery.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-green" style="font-size:1rem;padding:14px 34px;">🛍️ Explore Products</a>
+        <a href="https://wa.me/919173167670?text=Hello%2C%20I%20want%20to%20enquire%20about%20your%20Ayurvedic%20products" target="_blank" class="btn btn-outline">💬 WhatsApp Enquiry</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="n">20+</div><div class="l">Years Experience</div></div>
+        <div class="stat"><div class="n">50+</div><div class="l">Products</div></div>
+        <div class="stat"><div class="n">10K+</div><div class="l">Patients Served</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">Natural</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <span class="hero-card-icon">🏺</span>
+        <h3>American Herbal Pharmacy</h3>
+        <p>Bringing the timeless science of Ayurveda to modern healthcare — pure ingredients, trusted formulations, doctor-recommended wellness.</p>
+        <div class="trust-row">
+          <div class="tbadge"><span>✅</span>AYUSH</div>
+          <div class="tbadge"><span>🌿</span>100% Veg</div>
+          <div class="tbadge"><span>🚚</span>COD</div>
+          <div class="tbadge"><span>👨‍⚕️</span>Dr. Trusted</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CATEGORY BAR ════════════════ -->
+<div class="cat-bar">
+  <div class="wrap">
+    <div class="cat-pill on" data-f="all"><span class="ci">🌿</span><span class="cn">All Products</span></div>
+    <div class="cat-pill" data-f="joint"><span class="ci">🦴</span><span class="cn">Joint &amp; Bone</span></div>
+    <div class="cat-pill" data-f="immunity"><span class="ci">🛡️</span><span class="cn">Immunity</span></div>
+    <div class="cat-pill" data-f="blood"><span class="ci">🩸</span><span class="cn">Hemoglobin</span></div>
+    <div class="cat-pill" data-f="fertility"><span class="ci">🌸</span><span class="cn">Fertility</span></div>
+    <div class="cat-pill" data-f="hair"><span class="ci">💆</span><span class="cn">Hair &amp; Skin</span></div>
+    <div class="cat-pill" data-f="heart"><span class="ci">❤️</span><span class="cn">Heart</span></div>
+    <div class="cat-pill" data-f="energy"><span class="ci">⚡</span><span class="cn">Energy</span></div>
+    <div class="cat-pill" data-f="digestive"><span class="ci">🌱</span><span class="cn">Digestive</span></div>
+  </div>
+</div>
+
+<!-- ════════════════ FOUNDER ════════════════ -->
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="founder-visual rev">
+      <div class="founder-photo-wrap">
+        <div class="ayush-badge">
+          <span class="icon">✅</span>
+          <span class="lbl">AYUSH<br/>Approved</span>
+        </div>
+        <div class="founder-photo">
+          <!-- REPLACE with: <img src="images/mihir-shah.jpg" alt="Mihir Shah"/> -->
+          <div class="founder-photo-placeholder">
+            <span class="fp-icon">👨‍⚕️</span>
+            <p><strong>Founder Photo</strong><br/>Place your photo at:<br/><code>images/mihir-shah.jpg</code></p>
+          </div>
+        </div>
+        <div class="exp-badge">
+          <div class="num">20+</div>
+          <div class="lbl">Years of<br/>Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-info rev">
+      <span class="tag">About the Founder</span>
+      <h2 class="founder-name">Mihir Shah</h2>
+      <p class="founder-title">Ayurvedic Practitioner &amp; Founder — American Herbal Pharmacy</p>
+
+      <p>My name is <strong>Mihir Shah</strong>, and I am the founder of American Herbal Pharmacy. With more than <strong>20 years of dedicated experience</strong> in the field of Ayurvedic medicine, I have devoted my career to bringing the ancient science of Ayurveda to modern healthcare.</p>
+
+      <p>Our store specializes in <strong>authentic Ayurvedic medicines</strong> and premium healthcare products. We are a <strong>reputed supplier for Ayurvedic doctors and clinics</strong>, and proudly supply products to healthcare professionals across <strong>Gujarat and Maharashtra</strong>.</p>
+
+      <p>Our unwavering focus is on <strong>quality, authenticity, and trusted Ayurvedic formulations</strong> — ensuring that every product that leaves our pharmacy meets the highest standards of herbal purity and efficacy.</p>
+
+      <div class="founder-highlights">
+        <div class="fh-item">
+          <span class="ico">🕐</span>
+          <div><h4>20+ Years Experience</h4><p>Deep expertise in Ayurvedic practice</p></div>
+        </div>
+        <div class="fh-item">
+          <span class="ico">👨‍⚕️</span>
+          <div><h4>Doctor Supplier</h4><p>Trusted by clinics &amp; doctors</p></div>
+        </div>
+        <div class="fh-item">
+          <span class="ico">🗺️</span>
+          <div><h4>Gujarat &amp; Maharashtra</h4><p>Wide distribution network</p></div>
+        </div>
+        <div class="fh-item">
+          <span class="ico">✅</span>
+          <div><h4>AYUSH Certified</h4><p>Govt. approved formulations</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PRODUCTS ════════════════ -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-hdr">
+      <div>
+        <span class="tag">Our Products</span>
+        <h2 class="sec-title">Premium Ayurvedic<br/>Formulations</h2>
+        <p class="sec-sub">Doctor-trusted herbal medicines for every health need</p>
+      </div>
+      <a href="https://wa.me/919173167670?text=I%20want%20to%20place%20a%20bulk%20order" target="_blank" class="btn btn-saffron">📦 Bulk Orders →</a>
+    </div>
+
+    <div class="filters">
+      <button class="fb on" data-f="all">All</button>
+      <button class="fb" data-f="joint">Joint &amp; Bone</button>
+      <button class="fb" data-f="immunity">Immunity</button>
+      <button class="fb" data-f="blood">Hemoglobin</button>
+      <button class="fb" data-f="fertility">Fertility</button>
+      <button class="fb" data-f="hair">Hair &amp; Skin</button>
+      <button class="fb" data-f="heart">Heart</button>
+      <button class="fb" data-f="energy">Energy</button>
+      <button class="fb" data-f="digestive">Digestive</button>
+    </div>
+
+    <div class="pgrid" id="pgrid">
+
+      <!-- 1. COLOFLEX PRO -->
+      <div class="pcard rev" data-c="joint heart immunity">
+        <div class="pbadge best">⭐ Best Seller</div>
+        <div class="pimg">
+          <img src="images/coloflex-pro.jpg" alt="Atharva Coloflex Pro"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">💊</span><span>Place image:<br/><code>images/coloflex-pro.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Joint · Heart · Cognitive</div>
+          <div class="pname">Atharva Coloflex Pro</div>
+          <div class="pdesc">Flaxseed Oil Softgel with Omega 3,6,9 &amp; Vitamin D₃ — supports joints, heart, brain function. 3×10 Softgels.</div>
+          <div class="ptags"><span class="ptag">🦴 Joint</span><span class="ptag">❤️ Heart</span><span class="ptag">🧠 Brain</span><span class="ptag">☀️ Vit D₃</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Atharva Coloflex Pro')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Atharva%20Coloflex%20Pro" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. FINDLA HB+ -->
+      <div class="pcard rev" data-c="blood immunity energy">
+        <div class="pbadge new">🆕 New</div>
+        <div class="pimg">
+          <img src="images/findla-hb.jpg" alt="Findla HB+"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🩸</span><span>Place image:<br/><code>images/findla-hb.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Hemoglobin · Immunity · Energy</div>
+          <div class="pname">Findla HB+ Veg Capsule</div>
+          <div class="pdesc">Complete hemoglobin booster with Prickly Pear Extract, Vitamin D₃, B12 &amp; Zinc. Boosts RBCs, energy and immunity. 3×10 Veg Caps.</div>
+          <div class="ptags"><span class="ptag">🩸 Hemoglobin</span><span class="ptag">⚡ Energy</span><span class="ptag">🛡️ Immunity</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Findla HB+ Veg Capsule')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Findla%20HB%2B" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ASTHI VAJRA GOLD -->
+      <div class="pcard rev" data-c="joint">
+        <div class="pbadge premium">🏆 Premium</div>
+        <div class="pimg">
+          <img src="images/asthi-vajra-gold.jpg" alt="Asthi Vajra Gold"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🦴</span><span>Place image:<br/><code>images/asthi-vajra-gold.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Arthritis · Sciatica · Lumbar Pain</div>
+          <div class="pname">Asthi Vajra Gold Capsules</div>
+          <div class="pdesc">Ayurvedic formula with Rasana, Nirgundi, Guggul &amp; Ashwagandha for arthritis, sciatica and lumbar pain. 30 Capsules.</div>
+          <div class="ptags"><span class="ptag">🦴 Arthritis</span><span class="ptag">💪 Pain Relief</span><span class="ptag">🔥 Anti-Inflam.</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Asthi Vajra Gold Capsules')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Asthi%20Vajra%20Gold" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. BRAHMI TIRTH -->
+      <div class="pcard rev" data-c="hair">
+        <div class="pbadge new">🌿 Ayurvedic</div>
+        <div class="pimg">
+          <img src="images/brahmi-tirth.jpg" alt="Brahmi Tirth Tablets"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">💆</span><span>Place image:<br/><code>images/brahmi-tirth.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Hair · Skin · Nails</div>
+          <div class="pname">Brahmi Tirth Tablets</div>
+          <div class="pdesc">Natural Hair Growth Solution with Biotin, Folic Acid &amp; Vitamin E. Strengthens roots, prevents hair fall, improves skin glow. 3×15 Tabs.</div>
+          <div class="ptags"><span class="ptag">💆 Hair Growth</span><span class="ptag">✨ Skin Glow</span><span class="ptag">💅 Nails</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Brahmi Tirth Tablets')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Brahmi%20Tirth%20Tablets" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. NOCEST NUTRA FORTE -->
+      <div class="pcard rev" data-c="fertility">
+        <div class="pbadge best">👩 Women's Health</div>
+        <div class="pimg">
+          <img src="images/nocest-nutra.jpg" alt="Nocest Nutra Forte"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🌸</span><span>Place image:<br/><code>images/nocest-nutra.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Female Fertility · PCOS · AMH</div>
+          <div class="pname">Nocest Nutra Forte Tablet</div>
+          <div class="pdesc">Advanced nutraceutical with Myo-Inositol 500mg for AMH optimization, ovulation support and hormonal balance in PCOS. 30 Tablets.</div>
+          <div class="ptags"><span class="ptag">🌸 PCOS</span><span class="ptag">🥚 Fertility</span><span class="ptag">⚖️ Hormones</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Nocest Nutra Forte Tablet')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Nocest%20Nutra%20Forte" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. SEA BUCKTHORN -->
+      <div class="pcard rev" data-c="energy immunity">
+        <div class="pbadge premium">⚡ Energy Booster</div>
+        <div class="pimg">
+          <img src="images/sea-buckthorn.jpg" alt="Sea Buckthorn Energy Booster"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🍊</span><span>Place image:<br/><code>images/sea-buckthorn.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Energy · Stamina · Immunity</div>
+          <div class="pname">Sea Buckthorn Energy Booster</div>
+          <div class="pdesc">Vegan natural energy booster — rich in antioxidants, improves strength, vitality and stamina. Premium plant-based formula.</div>
+          <div class="ptags"><span class="ptag">⚡ Energy</span><span class="ptag">💪 Strength</span><span class="ptag">🌿 Vegan</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Sea Buckthorn Energy Booster')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Sea%20Buckthorn%20Energy%20Booster" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. BLOCK CARE SYRUP -->
+      <div class="pcard rev" data-c="heart">
+        <div class="pbadge premium">❤️ Cardiac Care</div>
+        <div class="pimg">
+          <img src="images/block-care.jpg" alt="Block Care Syrup"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">❤️</span><span>Place image:<br/><code>images/block-care.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Heart · Cholesterol · Circulation</div>
+          <div class="pname">Block Care Syrup</div>
+          <div class="pdesc">Natural herbal solution for cardiac &amp; stroke management. Reduces triglycerides, cholesterol, varicose veins, supports healthy circulation. MRP ₹690.</div>
+          <div class="ptags"><span class="ptag">❤️ Heart</span><span class="ptag">🩺 Cholesterol</span><span class="ptag">🩸 Circulation</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹690</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Block Care Syrup')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Block%20Care%20Syrup" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. VEG D3 -->
+      <div class="pcard rev" data-c="immunity joint">
+        <div class="pbadge new">🌿 Veg Source</div>
+        <div class="pimg">
+          <img src="images/veg-d3.jpg" alt="VEG D3 Cal Fit DS"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">☀️</span><span>Place image:<br/><code>images/veg-d3.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Calcium · Vitamin D₃ · Bones</div>
+          <div class="pname">VEG D₃ — Cal Fit DS Tablet</div>
+          <div class="pdesc">Vitamin K₂-7 + Hadjod + Bavad Beej + Calcium + Magnesium + D₃. Improves calcium absorption, strengthens bones, teeth &amp; joint flexibility.</div>
+          <div class="ptags"><span class="ptag">☀️ Vit D₃</span><span class="ptag">🦷 Bones</span><span class="ptag">🦵 Joint Flex</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('VEG D3 Cal Fit DS Tablet')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20VEG%20D3%20Tablet" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. ALLER-S -->
+      <div class="pcard rev" data-c="immunity hair">
+        <div class="pbadge new">🌼 Allergy Relief</div>
+        <div class="pimg">
+          <img src="images/aller-s.jpg" alt="Aller-S Tablets"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🌼</span><span>Place image:<br/><code>images/aller-s.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Allergy · Skin · Eczema Relief</div>
+          <div class="pname">Aller-S Tablets</div>
+          <div class="pdesc">Best solution for allergy, eczema &amp; skin relief. Reduces sneezing, runny nose, itching. Supports immune balance. Safe for long-term use.</div>
+          <div class="ptags"><span class="ptag">🤧 Allergy</span><span class="ptag">🩹 Eczema</span><span class="ptag">🛡️ Immunity</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Aller-S Tablets')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Aller-S%20Tablets" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. VITAMIN B12 -->
+      <div class="pcard rev" data-c="blood energy">
+        <div class="pbadge best">💊 Rasayan</div>
+        <div class="pimg">
+          <img src="images/vitamin-b12.jpg" alt="Vitamin B12 Tablets"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">💊</span><span>Place image:<br/><code>images/vitamin-b12.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Nerve Health · Energy · Memory</div>
+          <div class="pname">Rasayan Vitamin B12 Tablets</div>
+          <div class="pdesc">Supports nerve cell function, red blood cell formation. Reduces fatigue, improves memory &amp; concentration. DNA synthesis support. 3×10 Tablets.</div>
+          <div class="ptags"><span class="ptag">🧠 Memory</span><span class="ptag">⚡ Energy</span><span class="ptag">🩸 RBC</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Rasayan Vitamin B12 Tablets')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Vitamin%20B12%20Tablets" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. ASTHA BOOM -->
+      <div class="pcard rev" data-c="immunity">
+        <div class="pbadge new">🫁 Respiratory</div>
+        <div class="pimg">
+          <img src="images/astha-boom.jpg" alt="Astha-Boom Tablet"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🫁</span><span>Place image:<br/><code>images/astha-boom.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Asthma · Bronchitis · Respiratory</div>
+          <div class="pname">Astha-Boom Tablet</div>
+          <div class="pdesc">Ayurvedic solution for acute &amp; chronic bronchitis. Reduces cough, wheezing, sinusitis, eosinophilia. Suitable for chronic &amp; acute cases.</div>
+          <div class="ptags"><span class="ptag">🫁 Asthma</span><span class="ptag">😮‍💨 Cough</span><span class="ptag">🤧 Sinusitis</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Astha-Boom Tablet')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Astha-Boom%20Tablet" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. URIGO -->
+      <div class="pcard rev" data-c="joint">
+        <div class="pbadge new">🦵 Gout Care</div>
+        <div class="pimg">
+          <img src="images/urigo.jpg" alt="Urigo Gout Care"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🦵</span><span>Place image:<br/><code>images/urigo.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Gout · Uric Acid · Joint Pain</div>
+          <div class="pname">Urigo Gout Care Capsule</div>
+          <div class="pdesc">Dissolves uric acid crystals from joints, toes, legs and fingers. Reduces joint pain &amp; swelling, prevents uric acid crystal formation. 30 Capsules.</div>
+          <div class="ptags"><span class="ptag">🦵 Gout</span><span class="ptag">💧 Uric Acid</span><span class="ptag">🔥 Swelling</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹240</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Urigo Gout Care Capsule')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Urigo%20Gout%20Care" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. KAYAKAM DETOX -->
+      <div class="pcard rev" data-c="digestive energy">
+        <div class="pbadge new">🌿 Detox</div>
+        <div class="pimg">
+          <img src="images/kayakam.jpg" alt="Kayakam Detox Powder"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🌿</span><span>Place image:<br/><code>images/kayakam.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Detox · Weight Loss · Digestion</div>
+          <div class="pname">Kayakam Detox Powder</div>
+          <div class="pdesc">Enriched with natural Ayurvedic herbs. Supports detoxification, helps in weight management, improves digestion &amp; removes toxins from body.</div>
+          <div class="ptags"><span class="ptag">🌿 Detox</span><span class="ptag">⚖️ Weight</span><span class="ptag">🥗 Digestion</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹180</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Kayakam Detox Powder')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Kayakam%20Detox%20Powder" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. ESPERM NUTRA -->
+      <div class="pcard rev" data-c="fertility energy">
+        <div class="pbadge premium">👨 Male Fertility</div>
+        <div class="pimg">
+          <img src="images/esperm-nutra.jpg" alt="Esperm Nutra Tablet"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">💪</span><span>Place image:<br/><code>images/esperm-nutra.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Male Fertility · Reproductive Health</div>
+          <div class="pname">Esperm Nutra Tablet</div>
+          <div class="pdesc">Complete solution for male infertility. Supports sperm health, testosterone balance &amp; reproductive wellness. 3×10 Tablets.</div>
+          <div class="ptags"><span class="ptag">👨 Male Health</span><span class="ptag">💪 Fertility</span><span class="ptag">⚡ Vitality</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹1,350</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Esperm Nutra Tablet')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Esperm%20Nutra%20Tablet" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. ASTHI PURAK -->
+      <div class="pcard rev" data-c="joint">
+        <div class="pbadge best">🦴 Combipack</div>
+        <div class="pimg">
+          <img src="images/asthi-purak.jpg" alt="Asthi+Purak Combipack"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🦴</span><span>Place image:<br/><code>images/asthi-purak.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Cartilage · Osteo-Articular Health</div>
+          <div class="pname">Asthi + Purak Combipack</div>
+          <div class="pdesc">Best for cartilage — disease modifying combination in osteo-articular problems. Boswellia 300mg + Resynthol 300mg + Glucosamine + KCl.</div>
+          <div class="ptags"><span class="ptag">🦴 Cartilage</span><span class="ptag">🔥 Arthritis</span><span class="ptag">💊 Veg</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹450</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Asthi+Purak Combipack')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Asthi%20Purak%20Combipack" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. ARSHONA -->
+      <div class="pcard rev" data-c="digestive">
+        <div class="pbadge new">🩺 Ayurvedic</div>
+        <div class="pimg">
+          <img src="images/arshona.jpg" alt="Arshona Tablets"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="pimg-ph" style="display:none"><span class="pe">🌱</span><span>Place image:<br/><code>images/arshona.jpg</code></span></div>
+        </div>
+        <div class="pbody">
+          <div class="pcat">Piles · Fissure · Fistula</div>
+          <div class="pname">Arshona Tablets</div>
+          <div class="pdesc">Authentic Ayurvedic medicine for Piles (Arsh), Fissure and Fistula. 100% herbal and safe for long-term use without side effects.</div>
+          <div class="ptags"><span class="ptag">🌿 Piles</span><span class="ptag">🩺 Fissure</span><span class="ptag">✅ Herbal</span></div>
+          <div class="pfoot">
+            <div class="pprice"><span class="pl">MRP</span><span class="pv">₹390</span></div>
+            <div class="pactions">
+              <button class="btn btn-green btn-sm" onclick="openModal('Arshona Tablets')">Enquire</button>
+              <a href="https://wa.me/919173167670?text=I%20want%20Arshona%20Tablets" target="_blank" class="btn btn-wa btn-sm">💬</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /pgrid -->
+  </div>
+</section>
+
+<!-- ════════════════ WHY CHOOSE US ════════════════ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto;">
+      <span class="tag tag-gold">Why Choose Us</span>
+      <h2 class="sec-title">Trusted by Doctors.<br/>Backed by Experience.</h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,.55)">American Herbal Pharmacy — where ancient Ayurveda meets modern trust</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rev">
+        <span class="why-icon">🕐</span>
+        <h3>20+ Years of Ayurvedic Experience</h3>
+        <p>Mihir Shah's two decades of deep expertise in Ayurvedic medicine ensures every product recommendation is grounded in real clinical knowledge and authentic tradition.</p>
+      </div>
+      <div class="why-card rev">
+        <span class="why-icon">👨‍⚕️</span>
+        <h3>Trusted by Ayurvedic Doctors</h3>
+        <p>We are a preferred supplier for Ayurvedic clinics and practitioners. Doctors across Gujarat and Maharashtra trust us for consistent quality and reliable supply.</p>
+      </div>
+      <div class="why-card rev">
+        <span class="why-icon">🗺️</span>
+        <h3>Supply Across Gujarat &amp; Maharashtra</h3>
+        <p>Our established distribution network covers doctors, clinics and pharmacies across two major states — with Cash on Delivery and Pan-India shipping.</p>
+      </div>
+      <div class="why-card rev">
+        <span class="why-icon">🌿</span>
+        <h3>Authentic Ayurvedic Formulations</h3>
+        <p>Every product is formulated using pure, natural ingredients following classical Ayurvedic texts. No compromise on authenticity, ever.</p>
+      </div>
+      <div class="why-card rev">
+        <span class="why-icon">✅</span>
+        <h3>AYUSH Certified Products</h3>
+        <p>All our formulations are approved by the Ministry of AYUSH, Government of India — ensuring safety, efficacy and compliance with national standards.</p>
+      </div>
+      <div class="why-card rev">
+        <span class="why-icon">📦</span>
+        <h3>Bulk Buy Schemes &amp; COD</h3>
+        <p>Exclusive schemes for doctors: Buy 12 Pcs + Get 24 Free. Mega scheme: Buy 120 + Get 240 Free. Cash on Delivery available across India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ SCHEMES ════════════════ -->
+<section class="schemes" id="schemes">
+  <div class="wrap">
+    <div style="text-align:center;max-width:540px;margin:0 auto;">
+      <span class="tag">Special Schemes</span>
+      <h2 class="sec-title">Buy More, Save More</h2>
+      <p class="sec-sub">Exclusive offers for doctors, clinics and bulk buyers</p>
+    </div>
+    <div class="sch-grid">
+      <div class="sch-card c1 rev">
+        <span class="sch-icon">📦</span>
+        <h3>Mega Buy Scheme</h3>
+        <p>Our best value offer for pharmacies and distributors. Buy in bulk and get massive savings on our full product range.</p>
+        <div class="sch-hl">Buy 120 Pcs → Get 240 Pcs FREE</div>
+        <a href="https://wa.me/919173167670?text=I%20want%20the%20Mega%20Buy%20Scheme%20-%20120+240%20Free" target="_blank" class="btn btn-saffron" style="font-size:.85rem;padding:10px 22px;">Enquire Now →</a>
+      </div>
+      <div class="sch-card c2 rev">
+        <span class="sch-icon">👨‍⚕️</span>
+        <h3>Doctor Exclusive Scheme</h3>
+        <p>Special pricing exclusively for registered Ayurvedic practitioners and clinics. Minimum 12 pieces order. Perfect for patient dispensing.</p>
+        <div class="sch-hl">Buy 12 Pcs → Get 24 Pcs FREE</div>
+        <a href="https://wa.me/919173167670?text=I%20am%20a%20Doctor%20and%20want%20the%20exclusive%20scheme" target="_blank" class="btn btn-green" style="font-size:.85rem;padding:10px 22px;">Doctor Enquiry →</a>
+      </div>
+      <div class="sch-card c3 rev">
+        <span class="sch-icon">🚚</span>
+        <h3>Cash on Delivery</h3>
+        <p>No advance payment. Order now, pay only when your medicines arrive at your doorstep. Pan-India delivery available.</p>
+        <div class="sch-hl">Pay on Delivery · Anywhere in India</div>
+        <a href="https://wa.me/919173167670?text=I%20want%20to%20place%20a%20COD%20order" target="_blank" class="btn btn-wa" style="font-size:.85rem;padding:10px 22px;">Order Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TRUST BAR ════════════════ -->
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="ti rev"><div class="ic">✅</div><h4>AYUSH Certified</h4><p>Ministry of AYUSH approved</p></div>
+    <div class="ti rev"><div class="ic">🌿</div><h4>100% Natural</h4><p>Pure herbs, no chemicals</p></div>
+    <div class="ti rev"><div class="ic">👨‍⚕️</div><h4>Doctor Trusted</h4><p>Preferred by Ayurvedic clinics</p></div>
+    <div class="ti rev"><div class="ic">🚚</div><h4>Pan-India Delivery</h4><p>Cash on Delivery available</p></div>
+    <div class="ti rev"><div class="ic">🕐</div><h4>20+ Years</h4><p>Deep Ayurvedic expertise</p></div>
+    <div class="ti rev"><div class="ic">🏺</div><h4>GMP Compliant</h4><p>Quality assured manufacturing</p></div>
+  </div>
+</div>
+
+<!-- ════════════════ BENEFITS OF AYURVEDA ════════════════ -->
+<section class="benefits" id="benefits">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto;">
+      <span class="tag">Ancient Wisdom</span>
+      <h2 class="sec-title">Benefits of Ayurveda</h2>
+      <p class="sec-sub">5,000 years of healing — now validated by modern science</p>
+      <!-- Second Sanskrit Slogan -->
+      <div style="margin-top:24px;background:var(--g5);border:1px solid rgba(82,183,136,.3);border-radius:var(--radius);padding:18px 22px;">
+        <p class="devanagari" style="font-size:1rem;color:var(--g2);line-height:1.9;font-weight:600;">स्वस्थस्य स्वास्थ्य रक्षणम् आतुरस्य विकार प्रशमनम्।</p>
+        <p style="font-size:.75rem;color:var(--txt3);margin-top:6px;font-style:italic;">"Protect the health of the healthy; cure the disease of the sick." — The goal of Ayurveda (Charaka Samhita)</p>
+      </div>
+    </div>
+    <div class="ben-grid" style="margin-top:44px;">
+      <div class="ben-card rev">
+        <span class="ben-icon">🌿</span>
+        <h3>100% Natural Ingredients</h3>
+        <p>Ayurvedic formulations use pure herbs, roots and minerals — no harmful chemicals or synthetic additives. Safe for long-term use with no side effects.</p>
+      </div>
+      <div class="ben-card rev">
+        <span class="ben-icon">🎯</span>
+        <h3>Root Cause Treatment</h3>
+        <p>Unlike symptomatic treatments, Ayurveda targets the root cause of disease — restoring the natural balance of Vata, Pitta and Kapha doshas for lasting healing.</p>
+      </div>
+      <div class="ben-card rev">
+        <span class="ben-icon">🛡️</span>
+        <h3>Strengthens Immunity</h3>
+        <p>Adaptogenic herbs like Ashwagandha, Tulsi and Neem strengthen the body's natural defense systems — protecting against infections and chronic conditions.</p>
+      </div>
+      <div class="ben-card rev">
+        <span class="ben-icon">⚖️</span>
+        <h3>Holistic Wellness</h3>
+        <p>Ayurveda addresses body, mind and spirit together — supporting digestion, stress, sleep, hormones and immunity as an interconnected system.</p>
+      </div>
+      <div class="ben-card rev">
+        <span class="ben-icon">🔬</span>
+        <h3>Scientifically Validated</h3>
+        <p>Our formulations combine classical Ayurvedic texts with modern pharmaceutical research — AYUSH certified, doctor trusted, clinically supported.</p>
+      </div>
+      <div class="ben-card rev">
+        <span class="ben-icon">💰</span>
+        <h3>Affordable &amp; Accessible</h3>
+        <p>Premium herbal medicine at accessible prices, with bulk ordering schemes and Cash on Delivery across India — making Ayurveda available to all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CONTACT ════════════════ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cinfo">
+      <span class="tag">Contact Us</span>
+      <h2 class="sec-title" style="margin-bottom:16px;">Get in Touch</h2>
+      <p>Have questions about our products or want to place an order? Reach out to Mihir Shah and our team directly — we respond quickly on WhatsApp.</p>
+      <div class="c-items">
+        <div class="c-item rev">
+          <div class="ic">📍</div>
+          <div><h4>Address</h4><p>33, Moti Pole, Chunara no Khancho, Shahpur, Ahmedabad-1, Gujarat, India</p></div>
+        </div>
+        <div class="c-item rev">
+          <div class="ic">📞</div>
+          <div><h4>Phone / WhatsApp</h4><p><a href="tel:9173167670">9173167670</a> &nbsp;·&nbsp; <a href="tel:7016262525">7016262525</a></p></div>
+        </div>
+        <div class="c-item rev">
+          <div class="ic">📧</div>
+          <div><h4>Email</h4><p><a href="mailto:info@ahealthyvision.com">info@ahealthyvision.com</a></p></div>
+        </div>
+        <div class="c-item rev">
+          <div class="ic">🌐</div>
+          <div><h4>Website</h4><p><a href="http://www.americanherbalpharmacy.com" target="_blank">www.americanherbalpharmacy.com</a></p></div>
+        </div>
+        <div class="c-item rev">
+          <div class="ic">⏰</div>
+          <div><h4>Hours</h4><p>Mon–Sat: 9:00 AM – 7:00 PM · Sun: 10:00 AM – 4:00 PM</p></div>
+        </div>
+        <div class="c-wa rev">
+          <a href="https://wa.me/919173167670?text=Hello%20Mihir%20Shah%2C%20I%20want%20to%20enquire%20about%20your%20Ayurvedic%20products" target="_blank" class="btn btn-wa" style="font-size:.95rem;padding:13px 28px;">💬 Chat with Mihir Shah on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cform rev">
+      <h3>Send an Enquiry</h3>
+      <div class="fg-row">
+        <div class="fg"><label>Your Name *</label><input type="text" id="fn" placeholder="Full name"/></div>
+        <div class="fg"><label>Phone Number *</label><input type="tel" id="fp" placeholder="+91 XXXXX XXXXX"/></div>
+      </div>
+      <div class="fg">
+        <label>Product of Interest</label>
+        <select id="fpr">
+          <option value="">— Select a product —</option>
+          <option>Atharva Coloflex Pro</option>
+          <option>Findla HB+ Veg Capsule</option>
+          <option>Asthi Vajra Gold Capsules</option>
+          <option>Brahmi Tirth Tablets</option>
+          <option>Nocest Nutra Forte Tablet</option>
+          <option>Sea Buckthorn Energy Booster</option>
+          <option>Block Care Syrup</option>
+          <option>VEG D3 Cal Fit DS Tablet</option>
+          <option>Aller-S Tablets</option>
+          <option>Rasayan Vitamin B12 Tablets</option>
+          <option>Astha-Boom Tablet</option>
+          <option>Urigo Gout Care Capsule</option>
+          <option>Kayakam Detox Powder</option>
+          <option>Esperm Nutra Tablet</option>
+          <option>Asthi+Purak Combipack</option>
+          <option>Arshona Tablets</option>
+          <option>Bulk / Multiple Products</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message / Health Concern</label><textarea id="fm" placeholder="Describe your health concern or any question..."></textarea></div>
+      <button class="btn btn-wa" onclick="sendEnquiry()" style="width:100%;justify-content:center;font-size:.98rem;padding:13px;">💬 Send via WhatsApp</button>
+      <p style="font-size:.74rem;color:var(--txt3);margin-top:10px;text-align:center;">Your message goes directly to our team via WhatsApp for instant response.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-brand">
+      <div class="fl">
+        <div class="ic">🌿</div>
+        <div>
+          <span class="name">American Herbal Pharmacy</span>
+          <span class="sub">अमृत तुल्य औषधि · Est. 2010</span>
+        </div>
+      </div>
+      <p>Authentic Ayurvedic medicines by Mihir Shah — 20+ years of expertise. Trusted by doctors across Gujarat &amp; Maharashtra. AYUSH approved. Cash on Delivery Pan-India.</p>
+      <div class="socials">
+        <a href="#" class="sl" title="Facebook">📘</a>
+        <a href="#" class="sl" title="Instagram">📸</a>
+        <a href="https://wa.me/919173167670" target="_blank" class="sl" title="WhatsApp">💬</a>
+        <a href="tel:9173167670" class="sl" title="Call">📞</a>
+      </div>
+    </div>
+
+    <div class="ft-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#founder">About Founder</a></li>
+        <li><a href="#products">All Products</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#benefits">Ayurveda Benefits</a></li>
+        <li><a href="#schemes">Schemes &amp; Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="ft-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#products">Joint &amp; Bone Care</a></li>
+        <li><a href="#products">Hemoglobin Boosters</a></li>
+        <li><a href="#products">Female Fertility</a></li>
+        <li><a href="#products">Male Fertility</a></li>
+        <li><a href="#products">Hair &amp; Skin Care</a></li>
+        <li><a href="#products">Heart Health</a></li>
+        <li><a href="#products">Energy Boosters</a></li>
+        <li><a href="#products">Digestive Health</a></li>
+      </ul>
+    </div>
+
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <div class="ft-contact">
+        <div class="fci"><span class="ic">📍</span><p>33, Moti Pole, Chunara no Khancho, Shahpur, Ahmedabad-1, Gujarat</p></div>
+        <div class="fci"><span class="ic">📞</span><p><a href="tel:9173167670">9173167670</a> · <a href="tel:7016262525">7016262525</a></p></div>
+        <div class="fci"><span class="ic">📧</span><p><a href="mailto:info@ahealthyvision.com">info@ahealthyvision.com</a></p></div>
+        <div class="fci"><span class="ic">🌐</span><p><a href="http://www.americanherbalpharmacy.com" target="_blank">americanherbalpharmacy.com</a></p></div>
+      </div>
     </div>
   </div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Search products, medicines...">
-    <button>🔍</button>
+  <div class="ft-bottom wrap">
+    <span>© 2025 American Herbal Pharmacy, Ahmedabad. All rights reserved.</span>
+    <span class="cer">✅ AYUSH Approved &nbsp;·&nbsp; 🌿 Made in India &nbsp;·&nbsp; 👨‍⚕️ Mihir Shah</span>
   </div>
+</footer>
 
-  <nav>
-    <a href="#" class="active">Home</a>
-    <a href="#">Products</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+<!-- ════════════════ WHATSAPP FLOAT ════════════════ -->
+<a href="https://wa.me/919173167670?text=Hello%20Mihir%20Shah%2C%20I%20want%20to%20enquire%20about%20Ayurvedic%20products" target="_blank" class="wa-float" title="Chat on WhatsApp">💬</a>
 
-  <div class="header-actions">
-    <button class="btn-cart">🛒 Cart (0)</button>
+<!-- ════════════════ MODAL ════════════════ -->
+<div class="modal-ov" id="modalOv">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h2 id="mTitle">Product Enquiry</h2>
+        <p>Fill details — we'll respond on WhatsApp instantly</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="fg"><label>Your Name *</label><input type="text" id="mn" placeholder="Full name"/></div>
+      <div class="fg"><label>Phone Number *</label><input type="tel" id="mphone" placeholder="+91 XXXXX XXXXX"/></div>
+      <div class="fg"><label>Your Message / Health Concern</label><textarea id="mmsg" placeholder="Describe your concern or ask any question..."></textarea></div>
+      <button class="btn btn-wa" onclick="sendModal()" style="width:100%;justify-content:center;font-size:.95rem;padding:13px;">💬 Send WhatsApp Enquiry</button>
+    </div>
   </div>
-</header>
-
-<!-- SECONDARY NAV -->
-<div class="nav-secondary">
-  <a href="#">Ayurvedic Medicines</a>
-  <a href="#">Obesity & Weight Loss</a>
-  <a href="#">Ortho & Joint Care</a>
-  <a href="#">Infertility Treatment</a>
-  <a href="#">Vitamin B12</a>
-  <a href="#">Skin & Hair Care</a>
-  <a href="#">Immunity Boosters</a>
-  <a href="#">Offers 🔥</a>
 </div>
 
-<!-- MARQUEE -->
-<div class="marquee-bar">
-  <span class="marquee-inner">
-    ⭐ New Arrival: Ashwagandha Gold Capsules &nbsp;|&nbsp; 🎉 Flat 20% off on all Ortho products &nbsp;|&nbsp; 🌿 100% Natural Ingredients &nbsp;|&nbsp; 🚚 Pan-India Delivery &nbsp;|&nbsp; ✅ AYUSH Certified &nbsp;|&nbsp; 💊 Expert Doctor Consultation Available &nbsp;|&nbsp; 🌼 Seasonal Special: Triphala Pack &nbsp;|&nbsp; 📦 Bulk Orders Welcome
-  </span>
-</div>
+<!-- ════════════════ JAVASCRIPT ════════════════ -->
+<script>
+// ── Navbar scroll
+const nb = document.getElementById('navbar');
+window.addEventListener('scroll', () => nb.classList.toggle('scrolled', scrollY > 60));
 
-<!-- HERO BANNER -->
-<div class="hero">
-  <div class="hero-leaf"></div>
-  <div class="hero-leaf"></div>
-  <div class="hero-content reveal">
-    <span class="hero-badge">✨ Trusted Since 2010 · Ahmedabad</span>
-    <h2
+// ── Hamburger
+const ham = document.getElementById('ham');
+const nl = document.getElementById('navLinks');
+ham.addEventListener('click', () => nl.classList.toggle('open'));
+document.addEventListener('click', e => { if (!nb.contains(e.target)) nl.classList.remove('open'); });
+
+// ── Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const id = this.getAttribute('href');
+    if (id === '#') return;
+    const el = document.querySelector(id);
+    if (el) { e.preventDefault(); nl.classList.remove('open'); window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 76, behavior: 'smooth' }); }
+  });
+});
+
+// ── Active nav
+const secs = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (scrollY >= s.offsetTop - 120) cur = s.id; });
+  navAs.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+});
+
+// ── Filter logic
+function applyFilter(f) {
+  document.querySelectorAll('.pcard').forEach(c => {
+    const cats = c.dataset.c || '';
+    c.classList.toggle('hidden', f !== 'all' && !cats.split(' ').includes(f));
+  });
+}
+
+// Filter buttons
+document.querySelectorAll('.fb').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.fb').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    applyFilter(b.dataset.f);
+  });
+});
+
+// Category pills
+document.querySelectorAll('.cat-pill').forEach(p => {
+  p.addEventListener('click', () => {
+    document.querySelectorAll('.cat-pill').forEach(x => x.classList.remove('on'));
+    p.classList.add('on');
+    const f = p.dataset.f;
+    document.querySelectorAll('.fb').forEach(b => { b.classList.toggle('on', b.dataset.f === f); });
+    applyFilter(f);
+    const ps = document.getElementById('products');
+    if (ps) window.scrollTo({ top: ps.getBoundingClientRect().top + scrollY - 76, behavior: 'smooth' });
+  });
+});
+
+// ── Scroll reveal
+const revEls = document.querySelectorAll('.rev');
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const idx = Array.from(revEls).indexOf(e.target);
+      setTimeout(() => e.target.classList.add('vis'), (idx % 4) * 70);
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+revEls.forEach(el => ro.observe(el));
+
+// ── Modal
+let curProd = '';
+function openModal(name) {
+  curProd = name;
+  document.getElementById('mTitle').textContent = name + ' — Enquiry';
+  document.getElementById('modalOv').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOv').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modalOv').addEventListener('click', e => { if (e.target === document.getElementById('modalOv')) closeModal(); });
+function sendModal() {
+  const n = document.getElementById('mn').value.trim();
+  const p = document.getElementById('mphone').value.trim();
+  const m = document.getElementById('mmsg').value.trim();
+  if (!n || !p) { alert('Please enter your name and phone number.'); return; }
+  const txt = `Hello Mihir Shah, I want to enquire about: *${curProd}*%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}${m ? '%0AMessage: ' + encodeURIComponent(m) : ''}`;
+  window.open(`https://wa.me/919173167670?text=${txt}`, '_blank');
+  closeModal();
+}
+
+// ── Contact form
+function sendEnquiry() {
+  const n = document.getElementById('fn').value.trim();
+  const p = document.getElementById('fp').value.trim();
+  const pr = document.getElementById('fpr').value;
+  const m = document.getElementById('fm').value.trim();
+  if (!n || !p) { alert('Please enter your name and phone number.'); return; }
+  const txt = `Hello Mihir Shah!%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}${pr ? '%0AProduct: ' + encodeURIComponent(pr) : ''}${m ? '%0AMessage: ' + encodeURIComponent(m) : ''}`;
+  window.open(`https://wa.me/919173167670?text=${txt}`, '_blank');
+}
+</script>
+</body>
+</html>
